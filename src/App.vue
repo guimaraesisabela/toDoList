@@ -61,7 +61,7 @@
             ></span>
 
             <div class="todo-content">
-              <input class="inputTasks" style="margin-bottom: 10px;" type="text" v-model="todo.content" />
+              <input class="inputTasks" style="margin-bottom: 10px; margin-top: 10px;" type="text" v-model="todo.content" />
             </div>
 
             <div class="actions">
@@ -130,16 +130,17 @@ onMounted(() => {
 </script>
 
 <style> 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
 body {
     background-color: pink;
-    font-family: monospace;
+    font-family: 'Playfair Display';
 }
 
 h1 {
   font-size: xx-large;
-  font-family: cursive;
   text-align: center;
+  font-family: 'Playfair Display';
 }
 
 .container {
