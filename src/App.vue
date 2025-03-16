@@ -9,7 +9,7 @@
     <div class="container">
     <section>
       <h1>CREATE A TO DO</h1>
-      <h2> What's needs to be done? </h2>
+      <h2> What needs to be done? </h2>
       <input class="inputTasks"
         type="text"
         placeholder="e.g. study"
