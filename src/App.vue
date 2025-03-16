@@ -25,7 +25,7 @@
             value="business"
             v-model="input_category"
           />
-          <span class="bubble business"></span>
+          <span class="bubble-business"></span>
           <div>Business</div>
         </label>
 
@@ -36,12 +36,12 @@
             value="personal"
             v-model="input_category"
           />
-          <span class="bubble personal"></span>
+          <span class="bubble-personal"></span>
           <div>Personal</div>
         </label>
       </div>
 
-      <input type="submit" value="Add to do" @click="addTodo" />
+      <input class="buttonAdd" type="submit" value="Add to do" @click="addTodo" />
     </section>
 
     <section class="todo-list">
@@ -52,8 +52,8 @@
           :key="todo.createdAt"
           :class="['todo-item', { done: todo.done }]"
         >
-          <label>
-            <input type="checkbox" v-model="todo.done" />
+          <label class="task-container">
+            <input class="task-checkbox" type="checkbox" v-model="todo.done" />
             <span
               :class="`bubble ${
                 todo.category == 'business' ? 'business' : 'personal'
@@ -129,34 +129,4 @@ onMounted(() => {
 });
 </script>
 
-<style> 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
-body {
-    background-color: pink;
-    font-family: 'Playfair Display';
-}
-
-h1 {
-  font-size: xx-large;
-  text-align: center;
-  font-family: 'Playfair Display';
-}
-
-.container {
-  text-align: center;
-}
-
-.inputTasks {
-  width: 25rem;
-  border-radius: 10px;
-  padding: 5px;
-  border: none;
-}
-
-.inline {
-  display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 10px;
-}
-</style>
